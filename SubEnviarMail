@@ -1,0 +1,38 @@
+Sub Enviar_email()
+
+    Dim OutApp As Object
+    Dim EnviarCorreos As Object
+    With Application
+        .EnableEvents = False
+        .ScreenUpdating = False
+    End With
+    Set OutApp = CreateObject("Outlook.Application")
+    Dim cel As Range
+    Dim NumRows As Integer
+    Dim sht As Worksheet
+    Set sht = ActiveSheet
+    'Set Att1 = "C:\Users\David\Desktop\prruebavba.xlsx" 'otra forma de adjuntar
+     NumRows = Cells(Rows.Count, 1).End(xlUp).Row
+     Set Rng = Range(Cells(1, "A"), Cells(NumRows, "A"))
+    For Each cel In Rng
+            Set OutMail = OutApp.CreateItem(0)
+            With OutMail
+                .To = cel.Value
+                .Subject = Range("C3").Value
+                .HTMLBody = Range("C4").Value
+                'Si deseas adicionar mas adjuntos
+                .Attachments.Add (Range("C2").Value)
+                .Display
+                '.Send  'enviar directamente
+           End With
+          
+     Next cel
+     
+        With Application
+                  .EnableEvents = True
+                  .ScreenUpdating = True
+            End With
+      
+      
+End Sub
+
