@@ -228,7 +228,7 @@ myStr = "john,smith,large,onion"
 strArray = Split(myStr, “,”)
 'strArray now contains a one dimensional ‘array containing “john”, “smith” and ‘“large” and “onion”
 ```
-### Joining Strings
+### Joining Strings 
 Join an array of strings into a single string
 ```
 Dim myStr As String, strArray(0 to 2) As String
