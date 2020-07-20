@@ -229,7 +229,7 @@ strArray = Split(myStr, “,”)
 'strArray now contains a one dimensional ‘array containing “john”, “smith” and ‘“large” and “onion”
 ```
 ### Joining Strings 
-Join an array of strings into a single string
+* Join an array of strings into a single string
 ```
 Dim myStr As String, strArray(0 to 2) As String
 strArray(0) = "I"
@@ -238,7 +238,7 @@ strArray(2) = "pizza"
 myStr = Join(strArray)
 'myStr now contains “I love pizza” 
 ```
-Join an Array of Strings with comma delimiter
+* Join an Array of Strings with comma delimiter
 ```
 Dim myStr As String, strArray(0 to 2) As String
 strArray(0) = "I"
