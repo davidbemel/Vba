@@ -140,4 +140,18 @@ MsgBox ActiveWindow.RangeSelection.Count
 # The Range property
 ```
 object.Range(cell1) object.Range(cell1, cell2)
+Worksheets(“Sheet1”).Range(“A1”).Value = 12.3
+Worksheets(“Sheet1”).Range(“Input”).Value = 100 'imput is a cell name
+ActiveSheet.Range(“A1:B10”).Value = 2
+
+# Merge cells
+
 ```
+Function ContainsMergedCells(rng As Range) Dim cell As Range
+ContainsMergedCells = False For Each cell In rng
+If cell.MergeCells Then ContainsMergedCells = True Exit Function
+End If Next cell End Function
+
+# The Cells property
+
+object.Cells(rowIndex, columnIndex) object.Cells(rowIndex) object.Cells
