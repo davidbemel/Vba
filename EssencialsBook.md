@@ -154,4 +154,36 @@ End If Next cell End Function
 
 # The Cells property
 
-object.Cells(rowIndex, columnIndex) object.Cells(rowIndex) object.Cells
+object.Cells(rowIndex, columnIndex)
+object.Cells(rowIndex) object.Cells
+Worksheets(“Sheet1”).Cells(1, 1) = 9
+ActiveSheet.Cells(3, 4) = 7
+ActiveCell.Cells(1, 1) = 5
+ActiveCell.Cells(2, 1) = 5
+ActiveSheet.Cells(520) = 2
+MsgBox ActiveSheet.Cells(17179869184)
+Range(“A1:D10”).Cells(5) = 2000
+Range(“A1:D10”).Cells(41)=2000
+ActiveSheet.Cells.ClearContents
+# The Offset property
+object.Offset(rowOffset, columnOffset
+ActiveCell.Offset(1,0).Value = 12
+ActiveCell.Offset(-1,0).Value = 15
+# Example
+Sub Macro1() 
+ActiveCell.FormulaR1C1 = “1”
+ActiveCell.Offset(1, 0).Range(“A1”).Select ActiveCell.FormulaR1C1 = “2”
+ActiveCell.Offset(1, 0).Range(“A1”).Select
+ActiveCell.FormulaR1C1 = “3” ActiveCell.Offset(-2, 0).Range(“A1”).Select
+End Sub
+# Example
+Sub Modified_Macro1()
+ActiveCell.FormulaR1C1 = “1” ActiveCell.Offset(1, 0).Select ActiveCell.FormulaR1C1 = “2” ActiveCell.Offset(1, 0).Select ActiveCell.FormulaR1C1 = “3” ActiveCell.Offset(-2, 0).Select
+End Sub
+# Variables, Data Types, and Constants
+
+x = 1
+InterestRate = 0.075 LoanPayoffAmount = 243089.87 DataEntered = False x = x + 1
+MyNum = YourNum * 1.25 UserName = “Bob Johnson” DateStarted = #12/14/2009#
+
+End Sub
